@@ -1,8 +1,8 @@
 "use strict";
-const newYear = "2022/01/01, 00:00:00";
-const Xmas = "2022/01/07, 12:00:00";
-const Even = "2022/01/14, 21:00:00";
-const voter = "2022/01/19, 12:00:00";
+const newYear = "2022/01/01, 00:00:00".replace(/[ :]/g, "/").split("/");
+const Xmas = "2022/01/07, 12:00:00".replace(/[ :]/g, "/").split("/");
+const Even = "2022/01/14, 21:00:00".replace(/[ :]/g, "/").split("/");
+const voter = "2022/01/19, 12:00:00".replace(/[ :]/g, "/").split("/");
 setClock('#newYear',newYear);
 setClock('#Xmas',Xmas);
 setClock('#Even',Even);
@@ -11,7 +11,7 @@ setClock('#Voter',voter);
 
 
 function getTimeRemaining(deadLine) {
-   const differense = Date.parse(deadLine) - Date.parse(new Date()),
+   const differense = Date.parse(deadLine[0], deadLine[1], deadLine[2], deadLine[3], deadLine[4], deadLine[5]) - Date.parse(new Date()),
    allDaysRound = Math.floor( (differense/(1000*60*60*24)) ),
    allHoursRound = Math.floor( (differense/(1000*60*60) % 24) ),
    allMinutesRound = Math.floor( (differense/1000/60) % 60 ),
