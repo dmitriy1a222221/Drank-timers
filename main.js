@@ -1,8 +1,8 @@
 "use strict";
-const newYear = "2022-01-01, 00:00:00";
-const Xmas = "2022-01-07, 12:00:00";
-const Even = "2022-01-14, 21:00:00";
-const voter = "2022-01-19, 12:00:00";
+const newYear = "2022/01/01, 00:00:00";
+const Xmas = "2022/01/07, 12:00:00";
+const Even = "2022/01/14, 21:00:00";
+const voter = "2022/01/19, 12:00:00";
 setClock('#newYear',newYear);
 setClock('#Xmas',Xmas);
 setClock('#Even',Even);
