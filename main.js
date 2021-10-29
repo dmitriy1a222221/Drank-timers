@@ -48,6 +48,6 @@ function getZero(num){
    if(num < 10 && num >= 0){
       return "0" + num;
    }else{
-      return num;
+      return num + "";
    }
 }
